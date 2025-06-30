@@ -1,0 +1,80 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: normal;
+}
+
+body{
+    padding:0;
+    margin:0;
+    background: linear-gradient(to right,#fdffda,#ca5e42);
+}
+
+.calc{
+    display:grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4,100px);
+    grid-template-rows: minmax(120px,auto) repeat(5,100px);
+
+}
+
+.calc > button{
+    cursor:pointer;
+    font-size:2rem;
+    border:1px solid white;
+    outline:none;
+    background-color:rgba(255,255,255,.5);
+    /* border-radius:6px; */
+  
+    
+}
+
+.calc > button:hover{
+    background-color: rgba(255,255,255,.75);
+}
+
+.spantwo{
+    grid-column: span 2;
+}
+
+.op{
+    grid-column:1/-1;
+    background-color: rgba(0,0,0,0.75);
+    display:flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-direction: column;
+    padding:10px;
+    word-wrap:break-word;
+    word-break: break-all;
+
+
+}
+
+.op .prevop{
+    color:rgba(255,255,255,0.75);
+    font-size:1.5rem;
+    padding-top: 7px;
+
+}
+
+.op .curop{
+    color:white;
+    font-size:2.5rem;    
+}
+
+.radbl {
+  border-bottom-left-radius: 20px;
+}
+
+.radbr {
+  border-bottom-right-radius: 20px;
+}
+
+
+.op{
+    border-top-left-radius:20px;
+    border-top-right-radius:20px;
+}
